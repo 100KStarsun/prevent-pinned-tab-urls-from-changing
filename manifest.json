@@ -1,0 +1,26 @@
+{
+	"manifest_version": 3,
+
+	"name": "Prevent Pinned Tab URLs From Changing",
+	"description": "This extension prevents the base URL of a tab from changing. Anything after a # can be changed (as that usually means jumping around to different headings). If links are clicked, they will not be opened.",
+	"version": "1.0",
+	"background": {
+		"service_worker": "service_worker.js"
+	},
+
+	"permissions": [
+        "activeTab",
+        "scripting"
+    ],
+	"host_permissions": [
+		"http://*/",
+		"https://*/"
+	],
+
+	"icons": {
+		"16": "icon16.png",
+		"32": "icon32.png",
+		"48": "icon48.png",
+		"128": "icon128.png"
+	  }
+}
